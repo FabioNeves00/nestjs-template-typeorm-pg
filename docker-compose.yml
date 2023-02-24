@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: api
+    depends_on:
+      - db
+    ports:
+      - '3000:3000'
+    env_file:
+      - .env.prod
+    networks:
+      - default
+  db:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: db
+    env_file:
+      - .env.prod
+    ports:
+      - '35000:5432'
+    networks:
+      - default
+networks:
+  default:
+    name: 'nestjs-backend'

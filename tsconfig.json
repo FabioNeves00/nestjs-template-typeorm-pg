@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@app/config": ["./src/config"],
+      "@app/services": ["./src/services"],
+      "@app/modules": ["./src/modules"],
+      "@app/types": ["./src/@types"],
+      "@app/decorators": ["./src/common/decorators"],
+      "@app/exceptions": ["./src/common/exceptions"],
+      "@app/pipes": ["./src/common/pipes"],
+      "@app/validation": ["./src/lib/validation"],
+    }
+  }
+}
